@@ -1,0 +1,80 @@
+doctype html
+
+html lang="en"
+    head
+        meta charset="UTF-8"
+        meta http-equiv="X-UA-Compatible" content="IE=edge"
+        meta name="viewport" content="width=device-width, initial-scale=1.0"
+        title Calculator
+        link rel="stylesheet" href="/style.css"
+    body 
+        h1 SVC
+        form method="post" action="/data"
+            div
+                ul  
+                    li 
+                        h2 class="title" Stock 
+                        select name="ticker"
+                            option value="ERIC-B.ST" Ericsson 
+                            option value="ACAD.ST" Academedia     
+                            option value="SWED-A.ST" Swedbank 
+                            option value="SHB-A.ST" Handelsbanken 
+                            option value="SBB-B.ST" Samhällsbyggnadsbolaget B
+                            option value="TETY.ST" Tethys Oil 
+                            option value="BETS-B.ST" Betsson  
+                            option value="SAVE.ST" Nordnet
+                            option value="HUFV-A.ST" Hufvudstaden 
+                            option value="INTRUM.ST" Intrum  
+                            option value="AXFO.ST" Axfood   
+                            option value="SECU-B.ST" Securitas    
+                            option value="ATVEXA-B.ST" Atvexa     
+                            option value="CAST.ST" Castellum     
+                            option value="KIND-SDB.ST" kindred     
+
+                    div id="cost_equity" 
+                        h2 class="title" Cost of Equity
+                        li
+                            label for="dividends_per_share_next_year" Dividends per Share Next Year 
+                            input type="number" name="dividends_per_share_next_year" step="0.01" value="2.5"    
+                        li
+                            label for="growth_rate_dividends" Growth Rate Dividends  
+                            input type="number" name="growth_rate_dividends" step="0.01" value="0.1"
+                    div id="wacc" 
+                        h2 id="wacc_title" class="title" Weighted Average Cost of Capital (WACC)
+                        li
+                            label for="market_value_equity" Market Value of Equity
+                            input type="number" name="market_value_equity" value="292640000000"  
+                        li
+                            label for="market_value_debt" Market Value of Debt 
+                            input type="number" name="market_value_debt" value="0"   
+                        li
+                            label for="cost_debt" Cost of Debt
+                            input type="number" name="cost_debt" value="0" 
+                        li
+                            label for="corporate_tax_rate" Corporate Tax Rate
+                            input type="number" name="corporate_tax_rate" step="0.01" value="0.21" 
+                    div id="dcf" 
+                        h2 id="dcf_title" class="title" Discounted Cash Flow (DCF)
+                        li
+                            label for="profit" Profit
+                            input type="number" name="profit" value="24000000000" 
+                        li
+                            label for="additional_years" Additional years 
+                            input type="number" name="additional_years" min="0" value="6"
+                        li
+                            label for="growth_rate" Growth Rate
+                            input type="number" name="growth_rate" step="0.01" value="1.08"
+                    div id="net_cash" 
+                        h2 class="title" Net Cash
+                        li
+                            label for="rentbearing_assets" Rentbearing Assets
+                            input type="number" name="rentbearing_assets" value="4125000000"   
+                        li
+                            label for="rentbearing_debt" Rentbearing Debt
+                            input type="number" name="rentbearing_debt" value="58343400000"   
+                    li 
+                        label for="share_quantity" Share Quantity 
+                        input type="number" name="share_quantity" value="3330142000"
+                    li class="button"
+                        button type="submit" Submit
+
