@@ -1,3 +1,4 @@
+
 def get_cost_of_equity(dividends_per_share_next_year, current_share_price, growth_rate_dividends)
     cost = (dividends_per_share_next_year/current_share_price) + growth_rate_dividends
     return cost

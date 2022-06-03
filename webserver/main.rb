@@ -26,6 +26,7 @@ def get_price(ticker)
 	end
 end
 
+#dokumentation 
 class Main < Sinatra::Base
 	configure do
 		# set :show_exceptions, false
